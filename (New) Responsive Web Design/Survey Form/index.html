@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">TIP-QC Track Elective Survey</h1>
+        <p id="description" class="description text-center">
+          This survey will be used to count the total number of student interested in each track elective.
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="student-number-label" for="student-number">Student Number</label>
+          <input
+            type="text"
+            name="student-number"
+            id="student-number"
+            class="form-control"
+            placeholder="Enter your student number (ex. 1837123)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name (ex. Juan Miguel C. Dela Cruz)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email (ex. example@tip.edu.ph)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="16"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>Which Track Elective are you planning to enroll to?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select a track elective</option>
+            <option value="DS">Data Science</option>
+            <option value="IS">Intelligence System</option>
+            <option value="RE">Railway Engineering</option>
+            <option value="SA">System Administration</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Did you attend the Track elective course orientation?</p>
+          <label>
+            <input
+              name="orientation"
+              value="yes"
+              type="radio"
+              class="input-radio"
+              checked
+            />Yes</label
+          >
+          <label>
+            <input
+              name="orientation"
+              value="no"
+              type="radio"
+              class="input-radio"
+            />No</label
+          >
+        </div>
+
+        <!-- <div class="form-group">
+          <p>What influenced you to ?</p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </div> -->
+
+        <div class="form-group">
+          <p>
+            What influenced you to consider your chosen track elective?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+
+          <label
+            ><input
+              name="prefer"
+              value="course-content"
+              type="checkbox"
+              class="input-checkbox"
+            />Course Content</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="professor"
+              type="checkbox"
+              class="input-checkbox"
+            />The Professors</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="orientation"
+              type="checkbox"
+              class="input-checkbox"
+            />Track Elective Orientation</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="Opportunities"
+              type="checkbox"
+              class="input-checkbox"
+            />Oppotunities</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="career"
+              type="checkbox"
+              class="input-checkbox"
+            />Future Career</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="salary"
+              type="checkbox"
+              class="input-checkbox"
+            />Possible Salary</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="others"
+              type="checkbox"
+              class="input-checkbox"
+            />Others</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>What is your expectation/s on your chosen track elective?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your answer here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
